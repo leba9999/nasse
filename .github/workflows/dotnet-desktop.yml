@@ -79,7 +79,7 @@ jobs:
       
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test
+      run: dotnet test $Solution_Name --configuration ${{ matrix.configuration }} --logger "trx;LogFileName=test-results.trx" || true
 
     - name: Test Report
       uses: dorny/test-reporter@v1
