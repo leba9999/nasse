@@ -14,7 +14,8 @@ namespace TestImageHandler.UnitTests
         public void Setup()
         {
             _imageGen = new ImageGenerator();
-            string assemblyDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string? assemblyLocation = Assembly.GetExecutingAssembly().Location;
+            string assemblyDirectory = Path.GetDirectoryName(assemblyLocation) ?? string.Empty;
             originalImagePath = Path.Combine(assemblyDirectory, "IMG_9149.JPG");
             outputImagePath = Path.Combine(assemblyDirectory, "IMG_9149_1.JPG");
             if (File.Exists(outputImagePath))
