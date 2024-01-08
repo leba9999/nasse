@@ -46,7 +46,7 @@ on:
 
 jobs:
 
-  build:
+  build_and_test:
 
     strategy:
       matrix:
@@ -85,7 +85,7 @@ jobs:
       uses: dorny/test-reporter@v1
       if: always()
       with:
-        name: DotNET Tests
+        name: Test report (${{ matrix.configuration }}, ${{ matrix.os }}) 
         path: "**/test-results.trx"                            
         reporter: dotnet-trx
         fail-on-error: true
