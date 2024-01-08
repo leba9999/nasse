@@ -1,0 +1,6 @@
+@Nasse_HostAddress = http://localhost:5289
+
+GET {{Nasse_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
