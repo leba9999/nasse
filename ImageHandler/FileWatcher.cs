@@ -9,5 +9,15 @@ namespace ImageHandler
 {
     public class FileWatcher : ServiceBase
     {
+
+        protected override void OnStart(string[] args)
+        {
+            // Start your application logic here
+        }
+
+        protected override void OnStop()
+        {
+            // Stop your application logic here
+        }
     }
 }
